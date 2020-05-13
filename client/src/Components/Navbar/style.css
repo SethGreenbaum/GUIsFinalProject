@@ -1,0 +1,24 @@
+.nav-wrapper {
+    background-color: black;
+    position: absolute;
+    color: #7289da;
+    box-shadow: 300px;
+}
+
+#nav-title {
+    color: #7289da;
+    position: relative;
+    padding-left: 10%;
+}
+
+#searchNav {
+    position: relative;
+}
+
+#navTitle {
+    color: #7289da;
+}
+
+.input-field {
+    background-color: black;
+}
