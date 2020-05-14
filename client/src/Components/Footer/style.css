@@ -1,0 +1,20 @@
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .page-footer {
+      background-color: black;
+      padding: 0px;
+      color: #7289da;
+  }
+
+  .container {
+    color: #7289da;
+  }
