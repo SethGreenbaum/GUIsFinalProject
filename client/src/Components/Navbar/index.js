@@ -15,7 +15,8 @@ function Nav() {
       <a href="#" id="nav-title" className="brand-logo">Quarantinee</a>
       <ul id="nav-mobile" className="left hide-on-med-and-down">
       {/* <!-- Dropdown Trigger --> */}
-      <li><a class="dropdown-trigger" href="#!" id="navTitle" data-target="dropdown1">Dashboard<i class="material-icons right">arrow_drop_down</i></a></li>          <li><a id="navTitle" href="">Browse</a></li>
+      <li><a class="dropdown-trigger" href="#!" id="navTitle" data-target="dropdown1">Dashboard<i class="material-icons right">arrow_drop_down</i></a></li>          
+      <li><a id="navTitle" href="">Browse</a></li>
           <li>
           <form>
         <div className="input-field" id="searchNav">
@@ -27,7 +28,7 @@ function Nav() {
       </li>
       </ul>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
-        <li><a href="collapsible.html" id="navTitle">Logout</a></li>
+        <li><a href="../Login/index" id="navTitle">Login</a></li>
       </ul>
     </div>
   </nav>
