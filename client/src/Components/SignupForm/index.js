@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./style.css";
 
-function Login() {
-      return (
-  
+function SignupForm() {
+    return (
+      <div id="SignupForm">
         <div className="container">
-          <div className="row login-card">
-            <div className="col-md-6 col-md-offset-3" id="login-form">
-              <h2 className="form-header">Login Form</h2>
-              <form className="login">
+          <div className="row Signup-card">
+            <div className="card col s12 m6 offset-m3 l6 offset-l3" id="signup-form">
+              <h2 className="form-header">Sign Up Form</h2>
+              <form className="Signup">
                 <div className="form-group">
                   <label htmlFor="exampleInputEmail1">Quarantinee Username</label>
                   <input type="text" className="form-control" id="email-input" placeholder="glitterUnicorn" />
@@ -17,14 +17,15 @@ function Login() {
                   <label htmlFor="exampleInputPassword1">Password</label>
                   <input type="password" className="form-control" id="password-input" placeholder="Password" />
                 </div>
-                <button type="submit" className="btn btn-default" id="login-btn">Login</button>
+                <button type="submit" className="btn btn-default" id="Signup-btn">Sign Up</button>
                 <br />
-                <p>Or sign up <a href="/signup">here</a></p>
+                <p>Or Log in <a href="/Login">here</a></p>
               </form>
             </div>
           </div>
         </div>
+        </div>
       );
-    };
-
-export default Login;
+    }
+    
+export default SignupForm;

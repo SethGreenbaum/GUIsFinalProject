@@ -2,13 +2,8 @@ import React from "react";
 import "./style.css";
 // import Card from "../Card/Card";
 
-function Wrapper() {
-    return (
-        
-        <div class="wrapper-body">
-            {/* <Card /> */}
-        </div>
-    )
+function Wrapper(props) {
+    return <main className="wrapper-body" {...props} />;
 }
 
 export default Wrapper;
