@@ -4,7 +4,7 @@ module.exports = {
   findAll: function(req, res) {
     db.Post
       .find(req.query)
-      .populate("likes")
+      .populate({path: "likes", model: db.Like})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -19,7 +19,7 @@ module.exports = {
   create: function(req, res) {
     db.Post
       .create(req.body)
-      .then(({ _id }) => db.User.findOneAndUpdate({}, { $push: { posts: _id } }, { new: true }))
+      .then(({ _id }) => db.User.findOneAndUpdate({username: req.body.username}, { $push: { posts: _id } }, { new: true }))
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
