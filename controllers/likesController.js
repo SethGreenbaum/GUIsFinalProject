@@ -18,7 +18,7 @@ module.exports = {
   create: function(req, res) {
     db.Like
       .create(req.body)
-      .then(({ _id }) => db.User.findOneAndUpdate({header: req.body.header}, { $push: { likes: _id } }, { new: true }))
+      .then(({ _id }) => db.Post.findOneAndUpdate({header: req.body.header}, { $push: { likes: _id } }, { new: true }))
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
