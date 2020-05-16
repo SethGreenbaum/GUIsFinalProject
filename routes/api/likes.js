@@ -3,6 +3,7 @@ const likesController = require("../../controllers/likesController");
 
 router.route("/")
   .get(likesController.findAll)
+  .get(likesController.findByUser)
   .post(likesController.create);
 
 router
@@ -10,5 +11,6 @@ router
   .get(likesController.findById)
   .put(likesController.update)
   .delete(likesController.remove);
+
 
 module.exports = router;

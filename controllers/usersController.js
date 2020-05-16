@@ -7,6 +7,9 @@ module.exports = {
       .populate(
         {path: "posts", model: db.Post}
         )
+      .populate(
+        {path: "messages", model: db.Message}
+        )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

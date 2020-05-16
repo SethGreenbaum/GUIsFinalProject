@@ -10,6 +10,12 @@ const userSchema = new Schema({
       ref: "Post"
     }
   ],
+  messages: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Message"
+    }
+  ],
   date: { type: Date, default: Date.now }
 });
 
