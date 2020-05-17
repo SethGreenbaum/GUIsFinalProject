@@ -1,5 +1,4 @@
 import React from 'react';
-import "./style.css";
 
 function PostForm() {
     return (
@@ -23,7 +22,7 @@ function PostForm() {
             <label htmlFor="quo">Link:</label>
             <textarea id="que" className="link" name="quote" rows={8} cols={40} defaultValue={""} />
           </div>
-          <a className="button post" type="submit" id="postBtn">Add Post</a>
+          <a className="btn post" type="submit" id="postBtn">Add Post</a>
         </form>
       </div>
     )

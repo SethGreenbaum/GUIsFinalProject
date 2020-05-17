@@ -14,7 +14,7 @@ export default class Slider extends Component {
             <div className="container">
                 
 
-                <div classaAme="container">
+                <div className="container">
                     <div className="slider">
                         <ul className="slides">
                         <li>
