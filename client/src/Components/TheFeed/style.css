@@ -1,0 +1,36 @@
+#feedPostStyle {
+    background-color: #5a5a5a;
+    margin: 0px;
+}
+
+#feedBox {
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border: 2px solid #7289da;
+    margin: 0px;
+    padding: 0px;
+}
+
+#singlePost {
+    padding: 0px;
+    border: .9px solid rgb(163, 163, 163);
+}
+
+#theFeedHeader {
+    color: #7289da;
+}
+
+#userpostID {
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+#userLinkID {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 0px; 
+}
+
+.card-footer {
+    padding-top: 0px;
+}

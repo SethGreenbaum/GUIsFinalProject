@@ -1,4 +1,11 @@
 #login-form {
-    padding: 30px;
     border-radius: 8px;
+}
+
+.form-header {
+    color: #7289da;
+}
+
+.orSignup {
+    color: black;
 }

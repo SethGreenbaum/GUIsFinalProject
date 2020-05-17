@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginBtn from "../LoginBtn/LoginBtn";
+import SignupBtn from "../SignupBtn/index";
 import "./style.css";
 
 function Nav() {
@@ -49,7 +51,7 @@ function Nav() {
             : "nav-link"
           }
           >
-            Sign Up
+            <SignupBtn />
           </Link>
         </li>
         <li>
@@ -61,7 +63,7 @@ function Nav() {
           : "nav-link"
         }
         >
-        Log In
+        <LoginBtn />
         </Link>
         </li>
       </ul>

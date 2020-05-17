@@ -1,0 +1,11 @@
+.modal {
+    border-radius: 8px;
+}
+
+.modal, .modal-content {
+    padding: 0px;
+}
+
+#addPost {
+ justify-content: center;
+}

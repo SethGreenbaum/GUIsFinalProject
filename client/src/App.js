@@ -11,6 +11,8 @@ import Wrapper from "./Components/Wrapper";
 import Login from "./pages/LoginPage";
 import Signup from "./pages/SignupPage";
 import Slider from "./Components/Carousel/index";
+import PostBtnModal from "./Components/PostBtnModal/PostBtnModal";
+import SecondRow from "./Components/SecondRow/SecondRow";
 
 
 function App() {
@@ -25,7 +27,9 @@ function App() {
       <Route exact path="/Login/" component={Login} />
       <Route exact path="/Signup/" component={Signup} />
       <HeadlineCard />
+      <PostBtnModal />
         <Slider />
+        <SecondRow />
         <Switch>
           {/* <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
