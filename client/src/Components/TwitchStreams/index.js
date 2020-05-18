@@ -15,9 +15,9 @@ function TwitchStreams() {
                     </div> */}
                     <div className="card">
                         <div className="card-image">
-                            <img src="https://cms.qz.com/wp-content/uploads/2019/11/twitch-studio_01_live-experience_1440x900.png?w=1600&h=900&crop=1&strip=all&quality=75" />
+                            <img src="https://cms.qz.com/wp-content/uploads/2019/11/twitch-studio_01_live-experience_1440x900.png?w=1600&h=900&crop=1&strip=all&quality=75" alt="twitch1"/>
                             <span className="card-title">Card Title</span>
-                            <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
+                            {/* <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a> */}
                         </div>
                     <div className="card-content">
                         <p>I am very simple card, just for test :)</p>
@@ -27,9 +27,9 @@ function TwitchStreams() {
                 <div className="col s6 m6 l12">
                 <div className="card">
                         <div className="card-image">
-                            <img src="https://blog.twitch.tv/assets/uploads/5aa8e90a61e6e5846ab73775fe143b3a.png" />
+                            <img src="https://blog.twitch.tv/assets/uploads/5aa8e90a61e6e5846ab73775fe143b3a.png" alt="twitch2"/>
                             <span className="card-title">Card Title</span>
-                            <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a>
+                            {/* <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">add</i></a> */}
                         </div>
                     
                     <div className="card-content">

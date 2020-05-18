@@ -1,6 +1,5 @@
 import React from 'react';
-// import M from "materialize-css";
-// import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/css/materialize.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import { Layout } from './Components/Layout';
 // import { Main } from './Components/Main';
@@ -10,8 +9,7 @@ import Footer from "./Components/Footer";
 import Wrapper from "./Components/Wrapper";
 import Login from "./pages/LoginPage";
 import Signup from "./pages/SignupPage";
-import Slider from "./Components/Carousel/index";
-import PostBtnModal from "./Components/PostBtnModal/PostBtnModal";
+import Slider from "./Components/Slider/index";
 import SecondRow from "./Components/SecondRow/SecondRow";
 
 
@@ -24,10 +22,10 @@ function App() {
       <Route exact path="/Login/" component={Login} />
       </Nav >
       <Wrapper>
+      {/* <DashboardNav /> */}
       <Route exact path="/Login/" component={Login} />
       <Route exact path="/Signup/" component={Signup} />
       <HeadlineCard />
-      <PostBtnModal />
         <Slider />
         <SecondRow />
         <Switch>

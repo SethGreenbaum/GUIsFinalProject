@@ -1,26 +1,39 @@
-import React from "react";
+import React, { Component } from "react";
+import M from "materialize-css";
 import { Link } from "react-router-dom";
 import LoginBtn from "../LoginBtn/LoginBtn";
 import SignupBtn from "../SignupBtn/index";
 import "./style.css";
 
-function Nav() {
+export default class Nav extends Component {
+
+  componentDidMount() {
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems, {});
+    });
+}
+
+render() {
     return (
-        <div className="navbar-fixed">
-            <ul id="dropdown1" class="dropdown-content">
-                <li><a href="#!">one</a></li>
-                <li><a href="#!">two</a></li>
-                <li class="divider"></li>
-                <li><a href="#!">three</a></li>
+        <div className="navbar">
+            <ul id="dropdown1" className="dropdown-content">
+                <li><a href="#!">Browse</a></li>
+                <li><a href="#!">Messages</a></li>
+                <li><a href="#!">Posts</a></li>
+                <li><a href="#!">Favorites</a></li>
+                <li><a href="#!">Settings</a></li>
+                <li className="divider"></li>
+                <li><a href="#!" id="logoutID">Login</a></li>
             </ul>
-        <nav>
+        <nav className="nav-extended">
     <div className="nav-wrapper z-depth-3">
-      <a href="/" id="nav-title" className="brand-logo">Quarantinee</a>
-      <ul id="nav-mobile" className="left hide-on-med-and-down">
+      <a href="/" id="nav-title" className="brand-logo center">Quarantinee</a>
+      <ul id="nav-mobile">
       {/* <!-- Dropdown Trigger --> */}
-      <li><a class="dropdown-trigger" href="#!" id="navTitle" data-target="dropdown1">Dashboard<i class="material-icons right">arrow_drop_down</i></a></li>          
-      <li>
-        <Link
+      <li><a className="dropdown-trigger" href="#!" id="Dashboard" data-target="dropdown1">User Options<i className="material-icons right">arrow_drop_down</i></a></li>          
+      <li className="hide-on-med-and-down">
+        <Link id="nav-title"
         to="/"
         className={
           window.location.pathname === "/"
@@ -31,7 +44,7 @@ function Nav() {
           Browse
         </Link>
       </li>
-          <li>
+          {/* <li>
           <form>
         <div className="input-field" id="searchNav">
           <input id="search" type="search" required />
@@ -39,7 +52,7 @@ function Nav() {
           <i className="material-icons">close</i>
         </div>
       </form>
-      </li>
+      </li> */}
       </ul>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>
@@ -73,4 +86,5 @@ function Nav() {
     );
 }
 
-export default Nav;
+}
+
