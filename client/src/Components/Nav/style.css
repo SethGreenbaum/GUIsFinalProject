@@ -5,16 +5,30 @@
     box-shadow: 300px;
 }
 
+
+
 #nav-title {
     color: #7289da;
-    position: relative;
-    padding-left: 10%;
+    margin-left: 35px;
 }
 
-#navTitle {
+#Dashboard {
+    color: #7289da;
+
+}
+.input-field {
+    background-color: black;
+}
+
+#dropdown1 {
+    background-color: black;
+}
+
+#dropdown1 a {
     color: #7289da;
 }
 
-.input-field {
-    background-color: black;
+a#logoutID {
+    color: lightgreen;
+    font-weight: bold;
 }
