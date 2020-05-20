@@ -1,0 +1,39 @@
+.opacity {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    opacity: .9;
+    margin-top: 170px;
+}
+
+.card-content {
+    font-size: 20px;
+}
+
+.landingTag {
+    color: #7289da;
+}
+
+.landingStyle {
+    border-radius: 5px;
+    background-color: rgb(36, 36, 36);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border: 2px solid #7289da;
+}
+
+.covidinfo {
+    color: #ffAB40;
+    font-weight: bold;
+}   
+
+.card .card-content .card-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #7289da;
+}
+
+.covidsite, 
+.nokidhungry {
+    font-size: 20px;
+    color: #7289da;
+
+}
+
