@@ -24,7 +24,12 @@ render() {
                 <li><a href="#!">Favorites</a></li>
                 <li><a href="#!">Settings</a></li>
                 <li className="divider"></li>
-                <li><a href="#!" id="logoutID">Login</a></li>
+                <li>
+                  <a href="/LandingPage/" 
+                  id="logoutID">
+                    Logout
+                    </a>
+                    </li>
             </ul>
         <nav className="nav-extended">
     <div className="nav-wrapper z-depth-3">
@@ -44,17 +49,8 @@ render() {
           Browse
         </Link>
       </li>
-          {/* <li>
-          <form>
-        <div className="input-field" id="searchNav">
-          <input id="search" type="search" required />
-          <label className="label-icon" for="search"><i className="material-icons" id="navTitle">search</i></label>
-          <i className="material-icons">close</i>
-        </div>
-      </form>
-      </li> */}
       </ul>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
+      {/* <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>
           <Link
           to="/Signup/"
@@ -79,7 +75,7 @@ render() {
         <LoginBtn />
         </Link>
         </li>
-      </ul>
+      </ul> */}
     </div>
   </nav>
   </div>
