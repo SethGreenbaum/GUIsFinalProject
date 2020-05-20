@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   getPosts: function() {
-    return axios.get("/api/posts");
+    return axios.get("/api/posts/");
   },
   getPost: function(id) {
     return axios.get("/api/posts/" + id);
