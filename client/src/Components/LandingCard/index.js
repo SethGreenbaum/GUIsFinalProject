@@ -4,7 +4,7 @@ import "./style.css";
 function LandingCard() {
     return (
             <div className="row">
-                <div className="col s6 offset-s3 m6 offset-m3 l6 offset-l3">
+                <div className="col s12 m8 offset-m2 l6 offset-l3">
                 <div className="card opacity landingStyle">
         <div className="card-content black-text">
           <span className="card-title center">Welcome to Quarantinee</span>
@@ -17,7 +17,7 @@ function LandingCard() {
             href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">here.</a></h3>
         </div>
         <div className="card-action">
-        <h3 className="nokidhungry">Consider donating to No Kid Hungry <a className="nokidhungryLink" href="https://www.nokidhungry.org/" target="_blank">here</a>to help give a meal to a kid in need.</h3>        </div>
+        <h3 className="nokidhungry center">Consider donating to No Kid Hungry <a className="nokidhungryLink" href="https://www.nokidhungry.org/" target="_blank">here</a>to help give a meal to a kid in need.</h3>        </div>
       </div>
                 </div>
             </div>
