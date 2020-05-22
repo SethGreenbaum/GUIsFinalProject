@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import M from "materialize-css";
 import { Link } from "react-router-dom";
-import LoginBtn from "../LoginBtn/LoginBtn";
-import SignupBtn from "../SignupBtn/index";
+// import LoginBtn from "../LoginBtn/LoginBtn";
+// import SignupBtn from "../SignupBtn/index";
 import "./style.css";
 
 export default class Nav extends Component {

@@ -18,6 +18,7 @@ function App() {
       <NavLandingPage>
       <Route exact path="/Signup/" component={Signup} />
       <Route exact path="/Login/" component={Login} />
+      <Route exact path="/Members/" component={Members} />
       </NavLandingPage >
       <LandingPage />
       <Switch>
