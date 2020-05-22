@@ -19,16 +19,15 @@ app.use(express.json());
   // app.use(morgan('dev'));
   // app.use(bodyParser.urlencoded({	extended: false	}));
   // app.use(bodyParser.json());
-
 // Sessions
-app.use(
-	session({
-		secret: 'buffy-summers', //pick a random string to make the hash that is generated secure
-		store: new MongoStore({ mongooseConnection: dbConnection }),
-		resave: false, //required
-		saveUninitialized: false //required
-	})
-);
+// app.use(
+// 	session({
+// 		secret: 'buffy-summers', //pick a random string to make the hash that is generated secure
+// 		store: new MongoStore({ mongooseConnection: dbConnection }),
+// 		resave: false, //required
+// 		saveUninitialized: false //required
+// 	})
+// );
 
 // Passport
 app.use(passport.initialize());
@@ -44,7 +43,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // route for passporth auth
-app.use('/user', user);
+// app.use('/user', user);
 
 
 // Connect to the Mongo DB
