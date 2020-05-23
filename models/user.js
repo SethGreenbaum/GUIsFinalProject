@@ -18,6 +18,12 @@ const userSchema = new Schema({
       ref: "Message"
     }
   ],
+  linklikes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Linklike"
+    }
+  ],
   date: { type: Date, default: Date.now }
 });
 userSchema.methods = {
