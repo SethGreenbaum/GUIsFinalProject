@@ -10,13 +10,24 @@ module.exports = {
       .populate(
         {path: "messages", model: db.Message}
         )
+      .populate(
+        {path: "linklikes", model: db.LinkLike}
+        )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
     db.User
       .findById(req.params.id)
-      .populate("posts")
+      .populate(
+        {path: "posts", model: db.Post}
+        )
+      .populate(
+        {path: "messages", model: db.Message}
+        )
+      .populate(
+        {path: "linklikes", model: db.LinkLike}
+        )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
