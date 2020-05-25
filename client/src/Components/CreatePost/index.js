@@ -5,19 +5,24 @@ import API from "../../utils/API/postApi";
 
 
 function CreatePostForm() {
-    const titleRef = useRef();
+    const usernameRef = useRef();
     const bodyRef = useRef();
-    const authorRef = useRef();
+    const headerRef = useRef();
+    const categoryRef = useRef();
+    const linkRef = useRef();
     const [state, dispatch] = useStoreContext();
 
     const handleSubmit = e => {
       e.preventDefault();
       dispatch({ type: LOADING });
-      API.createPost({
-        title: titleRef.current.value,
+      var postData = {
+        header: headerRef.current.value,
+        username: usernameRef.current.value,
         body: bodyRef.current.value,
-        author: authorRef.current.value
-      })
+        link: linkRef.current.value,
+        category: categoryRef.current.value,
+      }
+      API.createPost(postData)
         .then(result => {
           dispatch({
             type: ADD_POST,
@@ -25,17 +30,22 @@ function CreatePostForm() {
           });
         })
         .catch(err => console.log(err));
-      titleRef.current.value = "";
+      headerRef.current.value = "";
       bodyRef.current.value = "";
+      usernameRef.current.value = "";
+      linkRef.current.value = "";
+      categoryRef.current.value = "";
     };
 
     return (
       <div>
         <h1>Create a blog post</h1>
         <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
-          <input className="form-control mb-5" required ref={titleRef} placeholder="Title" />
+          <input className="form-control mb-5" required ref={headerRef} placeholder="Header" />
           <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-          <input className="form-control mb-5" ref={authorRef} placeholder="Screen name" />
+          <input className="form-control mb-5" ref={usernameRef} placeholder="username" />
+          <input className="form-control mb-5" required ref={linkRef} placeholder="Link" />
+          <input className="form-control mb-5" required ref={categoryRef} placeholder="Category" />
           <button className="btn btn-success mt-3 mb-5" disabled={state.loading}  type="submit">
             Save Post
           </button>

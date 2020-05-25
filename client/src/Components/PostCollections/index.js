@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API/postApi";
+import { STATES } from "mongoose";
 
 function PostCollections() {
   const [state, dispatch] = useStoreContext();
@@ -30,7 +31,7 @@ function PostCollections() {
               type: UPDATE_POSTS,
               posts: results.data
             });
-            console.log("posts retreived!")
+            console.log("posts retreived!" + JSON.stringify(results))
           })
           .catch(err => console.log(err));
       };
@@ -53,7 +54,7 @@ function PostCollections() {
                             <div className="card-content">
               <Link to={"/posts/" + post._id}>
                 <strong style={{color: "#7289da"}}>
-                  {post.title} by {post.author}
+                  {post.header} by {post.username}
                 </strong>
               </Link>
               <DeleteBtn onClick={() => removePost(post._id)} />
