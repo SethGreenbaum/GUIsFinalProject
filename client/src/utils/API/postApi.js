@@ -10,8 +10,8 @@ export default {
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
   },
-  createPost: function(postData) {
-    return axios.post("/api/posts/", postData);
+  createPost: function(id, postData) {
+    return axios.post("/api/posts/" + id, postData);
   },
   updatePost: function(id, postData) {
     return axios.put("/api/posts/" + id, postData);

@@ -1,14 +1,17 @@
 import React from 'react';
 // import "./style.css";
-import TheFeed from "../TheFeed/index";
+// import TheFeed from "../TheFeed/index";
+import { Row } from "../Grid";
+
+import TheFeedTest from "../TheFeedTest/index";
 import TwitchStreams from "../TwitchStreams/index";
 
 function SecondRow() {
     return (
-       <div className="row">
-           <TheFeed />
+       <Row>
+           <TheFeedTest />
            <TwitchStreams />
-       </div> 
+       </Row> 
     );
 }
 

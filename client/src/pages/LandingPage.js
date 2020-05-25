@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import LandingPageComponent from "../Components/LandingPageComponent/index";
 
-
-class LandingPage extends Component {
-    render() {
-        return (
-            <LandingPageComponent />
-        );
-    }
+const LandingPage = () => {
+    return (
+        <>
+        <LandingPageComponent />
+        </>
+    );
 }
+
 
 export default LandingPage;
 
