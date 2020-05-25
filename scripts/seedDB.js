@@ -49,24 +49,30 @@ db.User
 
   const postSeed = [
     {
-      title: "Hello World",
-      author: "admin",
+      header: "Hello World",
       body:
         "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
+        username: "johnny_chimpo",
+        link: "https://i.imgur.com/ZZQsw4J.png",
+        category: "random",
       date: new Date(Date.now())
     },
     {
-      title: "The Second Post",
-      author: "admin",
+      header: "The Second Post",
       body:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "F in chat please",
+        username: "BrendaKate",
+        link: "https://i.imgur.com/sxU1DPL.jpg",
+        category: "memes",
       date: new Date(Date.now())
     },
     {
-      title: "Another One",
-      author: "admin",
+      header: "Another One",
+      username: "al_paca",
       body:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "This is what I saw at my community pool yesterday..it was a TUESDAY",
+        link: "https://pbs.twimg.com/card_img/1264271888278269953/fAxbTiKx?format=jpg&name=small",
+        category: "random",
       date: new Date(Date.now())
     }
   ];

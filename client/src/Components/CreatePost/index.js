@@ -44,7 +44,7 @@ function CreatePostForm() {
           <input className="form-control mb-5" required ref={headerRef} placeholder="Header" />
           <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
           <input className="form-control mb-5" ref={usernameRef} placeholder="username" />
-          <input className="form-control mb-5" required ref={linkRef} placeholder="Link" />
+          <input className="form-control mb-5" ref={linkRef} placeholder="Link" />
           <input className="form-control mb-5" required ref={categoryRef} placeholder="Category" />
           <button className="btn btn-success mt-3 mb-5" disabled={state.loading}  type="submit">
             Save Post

@@ -1,3 +1,8 @@
+.collection {
+    border-radius: 5px;
+}
+
 .collection-item {
-    border: 5px solid black;
+    background-color: black;
+    border: 2px solid #7289da;
 }
