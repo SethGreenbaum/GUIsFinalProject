@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { CollectionItem, Collection } from "../CollectionList";
 import DeleteBtn from "../DeleteBtn";
 import { Link } from "react-router-dom";
+import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../../utils/actions";
 import API from "../../utils/API/postApi";
@@ -46,19 +47,42 @@ function PostCollections() {
         <Collection>
           {state.posts.map(post => ( 
             <CollectionItem key={post._id}>
-                <div className="card horizontal black">
-                    <div className="card-image">
-                        <img src="https://picsum.photos/200" />
+                <div className="card small horizontal black" id="image-style">
+                    <div className="card-image waves-effect waves-block waves-light" id="main-overlay">
+                        <img className="activator" src={post.link} id="image" />
+                        <div className="overlay">
+                          <div className="text-overlay">Click image for body preview</div>
+                        </div>
                         </div>
                         <div className="card-stacked">
-                            <div className="card-content">
+                            <div className="card-content" id="card-body">
+                            {post.header} 
+                            <br /> 
+                            <br />
+                              {post.body}
+                              <br />
+                              <br />
+              <div className="card-action">
               <Link to={"/posts/" + post._id}>
                 <strong style={{color: "#7289da"}}>
-                  {post.header} by {post.username}
+                  by u/{post.username}
                 </strong>
               </Link>
+              <br />
+              <br />
+              <a href={post.link} target="_blank">
+                <p href={post.link}>Link</p>
+              </a>
               <DeleteBtn onClick={() => removePost(post._id)} />
               </div>
+              </div>
+              </div>
+              <div className="card-reveal black">
+                <span className="card-title" style={{ color: "white"}}>{post.header}<i className="material-icons right">close</i>
+                <br />
+                <br />
+                <p>{post.body}</p>
+                 u/ <strong style={{ color: "orange" }}>{post.username}</strong></span>
               </div>
               </div>
             </CollectionItem>
