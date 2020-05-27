@@ -14,6 +14,21 @@ const userSeed = [
     date: new Date(Date.now())
   },
   {
+    username: "al_paca",
+    password: "alpaca",
+    date: new Date(Date.now())
+  },
+  {
+    username: "johnny_chimpo",
+    password: "beezkneez",
+    date: new Date(Date.now())
+  },
+  {
+    username: "BrendaKate",
+    password: "sailor23",
+    date: new Date(Date.now())
+  },
+  {
     username: "MsMarie",
     password: "heynow",
     date: new Date(Date.now())
@@ -53,26 +68,26 @@ db.User
       body:
         "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
         username: "johnny_chimpo",
-        link: "https://i.imgur.com/ZZQsw4J.png",
-        category: "random",
+        link: "https://preview.redd.it/fj6jjhej48151.jpg?width=960&crop=smart&auto=webp&s=869ea55d2d17ee68c2928ddf2c718e9c0980ba2b",
+        category: "Battlestation",
       date: new Date(Date.now())
     },
     {
-      header: "The Second Post",
+      header: "Corgi Puppy",
       body:
-        "F in chat please",
+        "Best thing thats ever happened to me",
         username: "BrendaKate",
         link: "https://i.imgur.com/sxU1DPL.jpg",
-        category: "memes",
+        category: "Puppies",
       date: new Date(Date.now())
     },
     {
-      header: "Another One",
+      header: "Seriously?",
       username: "al_paca",
       body:
         "This is what I saw at my community pool yesterday..it was a TUESDAY",
         link: "https://pbs.twimg.com/card_img/1264271888278269953/fAxbTiKx?format=jpg&name=small",
-        category: "random",
+        category: "InTheWild",
       date: new Date(Date.now())
     }
   ];

@@ -52,15 +52,16 @@ function CreatePostForm() {
       categoryRef.current.value = "";
     };
 
+
     return (
-      <div>
-        <h1>Create a blog post</h1>
+      <div className="card black" style={{ borderRadius: "5px", border: "2px solid #7289da", padding: "10px" }}>
+        <h1 style={{ color: "#7289da", textAlign: "center"}}>Create a blog post</h1>
         <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
-          <input className="form-control mb-5" required ref={headerRef} placeholder="Header" />
-          <textarea className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-          <input className="form-control mb-5" ref={usernameRef} placeholder="username" />
-          <input className="form-control mb-5" ref={linkRef} placeholder="Link" />
-          <input className="form-control mb-5" required ref={categoryRef} placeholder="Category" />
+          <input style={{ color: "white"}} className="form-control mb-5" required ref={headerRef} placeholder="Header" />
+          <textarea style={{ color: "white"}} className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
+          <input style={{ color: "white"}} className="form-control mb-5" ref={usernameRef} placeholder="username" />
+          <input style={{ color: "white"}} className="form-control mb-5" ref={linkRef} placeholder="Link" />
+          <input style={{ color: "white"}} className="form-control mb-5" required ref={categoryRef} placeholder="Category" />
           <button className="btn btn-success mt-3 mb-5" disabled={state.loading}  type="submit">
             Save Post
           </button>
