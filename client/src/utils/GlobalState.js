@@ -10,6 +10,7 @@ import {
   LOADING
 } from "./actions";
 
+
 const StoreContext = createContext();
 const { Provider } = StoreContext;
 
@@ -21,18 +22,21 @@ const reducer = (state, action) => {
       currentPost: action.post,
       loading: false
     };
+
   case UPDATE_POSTS:
     return {
       ...state,
       posts: [...action.posts],
       loading: false
     };
+
   case ADD_POST:
     return {
       ...state,
       posts: [action.post, ...state.posts],
       loading: false
     };
+
   case REMOVE_POST:
     return {
       ...state,
@@ -40,18 +44,21 @@ const reducer = (state, action) => {
         return post._id !== action._id; 
       })
     };
+
   case ADD_FAVORITE:
     return {
       ...state,
       favorites: [action.post, ...state.favorites],
       loading: false
     };
+
   case UPDATE_FAVORITES:
     return {
       ...state,
       favorites: [...state.favorites],
       loading: false
     };
+
   case REMOVE_FAVORITE:
     return {
       ...state,
@@ -59,15 +66,18 @@ const reducer = (state, action) => {
         return post._id !== action._id; 
       })
     };
+
   case LOADING:
     return {
       ...state,
       loading: true
     };
+
   default:
     return state;
   }
 };
+
 const StoreProvider = ({ value = [], ...props }) => {
   const [state, dispatch] = useReducer(reducer, {
     posts: [],
@@ -80,11 +90,15 @@ const StoreProvider = ({ value = [], ...props }) => {
       category: ""
     },
     favorites: [],
+    likes: [],
     loading: false
   });
+
   return <Provider value={[state, dispatch]} {...props} />;
 };
+
 const useStoreContext = () => {
   return useContext(StoreContext);
 };
+
 export { StoreProvider, useStoreContext };

@@ -43,11 +43,11 @@ const PostFavorites = () => {
           <h3 className="mb-5 mt-5">Click on a post to view in detail</h3>
           {state.favorites.map(post => (
             <CollectionItem key={post._id}>
-              <Link to={"/posts/" + post._id}>
+              <a href={"/posts/" + post._id}>
                 <strong>
                   {post.header} by {post.username}
                 </strong>
-              </Link>
+              </a>
               <DeleteBtn onClick={() => removeFromFavorites(post._id)} />
             </CollectionItem>
           ))}

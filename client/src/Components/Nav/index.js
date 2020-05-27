@@ -20,12 +20,12 @@ render() {
         <div className="navbar">
             <ul id="dropdown1" className="dropdown-content">
                 <li>
-                <Link to="/Members">Browse</Link>
+                <a href="/Members">Browse</a>
                 </li>
                 <li><a href="#!">Messages</a></li>
                 <li><a href="#!">Posts</a></li>
                 <li>
-                  <Link to="/favorites">Favorites</Link>
+                  <a href="/favorites">Favorites</a>
                 </li>
                 <li><a href="#!">Settings</a></li>
                 <li className="divider"></li>
@@ -41,12 +41,11 @@ render() {
       <a href="/Members" id="nav-title" className="brand-logo center">Quarantinee</a>
       <ul id="nav-mobile">
       {/* <!-- Dropdown Trigger --> */}
-      <li><a className="dropdown-trigger" id="Dashboard" data-target="dropdown1">User Options<i className="material-icons right">arrow_drop_down</i></a></li>          
+      <li><a className="dropdown-trigger" id="Dashboard" data-target="dropdown1">User Options<i className="material-icons right" style={{ color: "purple"}}>arrow_drop_down</i></a></li>          
       <li className="hide-on-med-and-down">
-        <Link id="nav-title"
-        to="/Members">
+        <a href="/Members" id="nav-title">
           Browse
-        </Link>
+        </a>
       </li>
       </ul>
       {/* <ul id="nav-mobile" className="right hide-on-med-and-down">
