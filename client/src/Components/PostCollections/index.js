@@ -49,7 +49,7 @@ function PostCollections() {
             <CollectionItem key={post._id} id="post-style">
                 <div className="card small horizontal black" id="image-style">
                     <div className="card-image waves-effect waves-block waves-light" id="main-overlay">
-                        <img className="activator" src={post.link} id="image" />
+                        {/* <img className="activator" src={post.link} id="image" /> */}
                         <div className="overlay">
                           <div className="text-overlay">Click image for body preview</div>
                         </div>

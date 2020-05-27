@@ -28,11 +28,11 @@ function CreatePostForm() {
             type: ADD_POST,
             post: result.data
           });
-          headerRef.current.value = "";
-          bodyRef.current.value = "";
-          usernameRef.current.value = "";
-          linkRef.current.value = "";
-          categoryRef.current.value = "";
+          // headerRef.current.value = "";
+          // bodyRef.current.value = "";
+          // usernameRef.current.value = "";
+          // linkRef.current.value = "";
+          // categoryRef.current.value = "";
         })
         .then(
           API.getPosts()
