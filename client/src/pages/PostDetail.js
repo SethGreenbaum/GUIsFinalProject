@@ -4,7 +4,9 @@ import { Col, Row, Container } from "../Components/Grid";
 import API from "../utils/API/postApi";
 import { useStoreContext } from "../utils/GlobalState";
 import { SET_CURRENT_POST, ADD_FAVORITE, REMOVE_FAVORITE } from "../utils/actions";
-import { render } from "react-dom";
+import Nav from "../Components/Nav/index";
+import Wrapper from "../Components/Wrapper/index";
+
 
 const Detail = props => {
   const [state, dispatch] = useStoreContext();
@@ -30,12 +32,15 @@ const Detail = props => {
   };
 
   return (
-    <>{state.currentPost ? (
+    <>
+    <Wrapper id="favorites-style">
+    <Nav />
+    {state.currentPost ? (
       <Container fluid>
         <Row>
           <Col size="m12">
               <h1>
-                {state.currentPost.title} by {state.currentPost.author}
+                {state.currentPost.header} by {state.currentPost.username}
               </h1>
           </Col>
         </Row>
@@ -60,13 +65,16 @@ const Detail = props => {
         </Row>
         <Row>
           <Col size="m2">
-            <Link to="/">← Back to Posts</Link>
+            <Link to="/Members">← Back to Posts</Link>
           </Col>
         </Row>
       </Container>
+      
     ) : (
       <div>loading...</div>
-    )}</>
+    )}
+    </Wrapper>
+    </>
   );
 };
 

@@ -82,12 +82,14 @@ class SignupForm extends Component {
                 </div>
 
                 <div className="form-group">
+                  <a className="modal-close">
                   <button
                     className="btn btn-default"
                     onClick={this.handleSubmit}
                     type="submit"
                     id="Signup-btn"
                   >Sign Up</button>
+                  </a>
                 </div>
 
               </form>
