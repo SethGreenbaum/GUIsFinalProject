@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_POST, LOADING } from "../../utils/actions";
+import { ADD_POST, LOADING, UPDATE_POSTS } from "../../utils/actions";
 import API from "../../utils/API/postApi";
 
 
@@ -28,7 +28,22 @@ function CreatePostForm() {
             type: ADD_POST,
             post: result.data
           });
+          headerRef.current.value = "";
+          bodyRef.current.value = "";
+          usernameRef.current.value = "";
+          linkRef.current.value = "";
+          categoryRef.current.value = "";
         })
+        .then(
+          API.getPosts()
+          .then(results => {
+            dispatch({
+              type: UPDATE_POSTS,
+              posts: results.data
+            });
+            console.log("posts retreived!" + JSON.stringify(results))
+          })
+        )
         .catch(err => console.log(err));
       headerRef.current.value = "";
       bodyRef.current.value = "";
