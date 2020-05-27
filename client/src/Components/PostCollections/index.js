@@ -46,7 +46,7 @@ function PostCollections() {
       {state.posts.length ? (
         <Collection>
           {state.posts.map(post => ( 
-            <CollectionItem key={post._id}>
+            <CollectionItem key={post._id} id="post-style">
                 <div className="card small horizontal black" id="image-style">
                     <div className="card-image waves-effect waves-block waves-light" id="main-overlay">
                         <img className="activator" src={post.link} id="image" />
@@ -56,7 +56,7 @@ function PostCollections() {
                         </div>
                         <div className="card-stacked">
                             <div className="card-content" id="card-body">
-                            {post.header} 
+                            {post.header}
                             <br /> 
                             <br />
                               {post.body}
@@ -89,11 +89,15 @@ function PostCollections() {
           ))}
         </Collection>
       ) : (
+        <div>
         <h3>You haven't added any posts yet!</h3>
-      )}
-      <div className="mt-5">
+        <div className="mt-5">
         <Link to="favorites">View favorites</Link>
       </div>
+      </div>
+        
+      )}
+      
     </div>
   );
 }

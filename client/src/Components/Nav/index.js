@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // import SignupBtn from "../SignupBtn/index";
 import "./style.css";
 
+
 export default class Nav extends Component {
 
   componentDidMount() {
@@ -18,14 +19,18 @@ render() {
     return (
         <div className="navbar">
             <ul id="dropdown1" className="dropdown-content">
-                <li><a href="#!">Browse</a></li>
+                <li>
+                <Link to="/Members">Browse</Link>
+                </li>
                 <li><a href="#!">Messages</a></li>
                 <li><a href="#!">Posts</a></li>
-                <li><a href="#!">Favorites</a></li>
+                <li>
+                  <Link to="/favorites">Favorites</Link>
+                </li>
                 <li><a href="#!">Settings</a></li>
                 <li className="divider"></li>
                 <li>
-                  <a href="/LandingPage/" 
+                  <a href="/" 
                   id="logoutID">
                     Logout
                     </a>
@@ -33,19 +38,13 @@ render() {
             </ul>
         <nav className="nav-extended">
     <div className="nav-wrapper z-depth-3">
-      <a href="/" id="nav-title" className="brand-logo center">Quarantinee</a>
+      <a href="/Members" id="nav-title" className="brand-logo center">Quarantinee</a>
       <ul id="nav-mobile">
       {/* <!-- Dropdown Trigger --> */}
-      <li><a className="dropdown-trigger" href="#!" id="Dashboard" data-target="dropdown1">User Options<i className="material-icons right">arrow_drop_down</i></a></li>          
+      <li><a className="dropdown-trigger" id="Dashboard" data-target="dropdown1">User Options<i className="material-icons right">arrow_drop_down</i></a></li>          
       <li className="hide-on-med-and-down">
         <Link id="nav-title"
-        to="/"
-        className={
-          window.location.pathname === "/"
-          ? "nav-link active"
-          : "nav-link"
-        }
-        >
+        to="/Members">
           Browse
         </Link>
       </li>

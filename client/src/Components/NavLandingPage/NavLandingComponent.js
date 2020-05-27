@@ -15,28 +15,10 @@ render() {
       <a href="/" id="nav-title" className="brand-logo center">Quarantinee</a>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>
-          <Link
-          to="/Signup/"
-          className={
-            window.location.pathname === "/Signup/"
-            ? "nav-link active"
-            : "nav-link"
-          }
-          >
             <SignupBtn />
-          </Link>
         </li>
         <li>
-          <Link 
-        to="/Login/"
-        className={
-          window.location.pathname === "/Login/"
-          ? "nav-link active"
-          : "nav-link"
-        }
-        >
         <LoginBtn />
-        </Link>
         </li>
       </ul>
     </div>
