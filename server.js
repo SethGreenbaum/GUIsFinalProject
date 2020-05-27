@@ -1,6 +1,6 @@
 const express = require("express");
-  const bodyParser = require('body-parser');
-  const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
 const session = require('express-session');
 const dbConnection = require('./passportAuth/database'); 
 const MongoStore = require('connect-mongo')(session);
@@ -19,15 +19,14 @@ app.use(express.json());
   app.use(morgan('dev'));
   app.use(bodyParser.urlencoded({	extended: false	}));
   app.use(bodyParser.json());
-// Sessions
-// app.use(
-// 	session({
-// 		secret: 'buffy-summers', //pick a random string to make the hash that is generated secure
-// 		store: new MongoStore({ mongooseConnection: dbConnection }),
-// 		resave: false, //required
-// 		saveUninitialized: false //required
-// 	})
-// );
+
+// express-session middleware
+// app.use(session({
+//   secret: 'lksivmwewiyas',    //needs to be a random string, "hashes" the cookie
+//   resave: false,
+//   saveUninitialized: false,
+//   // cookie: { secure: true }   //we would use this if we have an https url
+// }));
 
 // Passport
 app.use(passport.initialize());

@@ -34,3 +34,91 @@ function App() {
 }
 
 export default App;
+
+
+
+// class App extends Component {
+//   constructor() {
+//     super()
+//     this.state = {
+//       loggedIn: false,
+//       username: null
+//     }
+
+//     this.getUser = this.getUser.bind(this)
+//     this.componentDidMount = this.componentDidMount.bind(this)
+//     this.updateUser = this.updateUser.bind(this)
+//   }
+
+//   componentDidMount() {
+//     this.getUser()
+//   }
+
+//   updateUser(userObject) {
+//     this.setState(userObject)
+//   }
+
+//   getUser() {
+//     axios.get('/user/').then(response => {
+//       console.log('Get user response: ')
+//       console.log(response.data)
+//       if (response.data.user) {
+//         console.log('Get User: There is a user saved in the server session: ')
+
+//         this.setState({
+//           loggedIn: true,
+//           username: response.data.user.username
+//         })
+//       } else {
+//         console.log('Get user: no user');
+//         this.setState({
+//           loggedIn: false,
+//           username: null
+//         })
+//       }
+//     })
+//   };
+
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <Router>
+
+//           <StoreProvider>
+//             <NavLandingPage updateUser={this.updateUser} loggedIn={this.state.loggedIn}>
+
+//               {/* Routes to components */}
+//               <Route
+//                 exact path="/"
+//                 component={LandingPage} />
+
+//               <Route
+//                 path="/Signup/"
+//                 render={() =>
+//                   <SignupForm />} />
+
+//               <Route
+//                 path="/Login/"
+//                 render={() =>
+//                   <LoginForm
+//                     updateUser={this.updateUser} />} />
+
+//             </NavLandingPage>
+//             <LandingPage />
+
+//             {/* <Route exact path="/Members/" component={Members} /> */}
+//             <Switch>
+//               <Route exact path="/Members" component={Members} />
+//               <Route exact path="/posts/:id" component={PostDetail} />
+//               <Route exact path="/favorites" component={PostFavorites} />
+
+//               {/* <Members /> */}
+//             </Switch>
+//             <Footer />
+//           </StoreProvider>
+//         </Router>
+//       </React.Fragment>
+
+//     );
+//   }
+// }
