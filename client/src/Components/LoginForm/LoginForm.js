@@ -3,6 +3,7 @@ import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 import "./style.css";
 import API from "../../utils/API/userApi"
+import ls from "local-storage"
 
 
 class LoginForm extends Component {
@@ -42,6 +43,7 @@ class LoginForm extends Component {
         console.log('login response: ')
         console.log(response)
         if (response.status === 200) {
+          ls.set('username', this.state.username)
           // update App. js state with username, this is what doesn't work,
           // doesn't recognize updateUser props, tried drilling but got stuck in modal
           // this.props.updateUser({

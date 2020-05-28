@@ -4,15 +4,26 @@ import { Link } from "react-router-dom";
 // import LoginBtn from "../LoginBtn/LoginBtn";
 // import SignupBtn from "../SignupBtn/index";
 import "./style.css";
+import ls from "local-storage"
 
 
 export default class Nav extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: ''
+    }
+  };
   componentDidMount() {
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.dropdown-trigger');
         var instances = M.Dropdown.init(elems, {});
     });
+    var user = ls.get('username');
+    this.setState({
+      username: user
+    })
+    console.log("ls"+ user)
 }
 
 render() {
@@ -38,7 +49,7 @@ render() {
             </ul>
         <nav className="nav-extended">
     <div className="nav-wrapper z-depth-3">
-      <a href="/Members" id="nav-title" className="brand-logo center">Quarantinee</a>
+      <a href="/Members" id="nav-title" className="brand-logo center">Welcome {this.state.username}</a>
       <ul id="nav-mobile">
       {/* <!-- Dropdown Trigger --> */}
       <li><a className="dropdown-trigger" id="Dashboard" data-target="dropdown1">User Options<i className="material-icons right" style={{ color: "purple"}}>arrow_drop_down</i></a></li>          
