@@ -41,10 +41,7 @@ class LoginForm extends Component {
           //   loggedIn: true,
           //   username: response.data.username
           // })
-          // API.getUsers()
-          // .then(response => {
-          //   console.log(response)
-          // })
+
           // update the state to redirect to home
           console.log("this worked for login!!")
           this.setState({

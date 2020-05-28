@@ -7,8 +7,7 @@ import {
   ADD_FAVORITE,
   UPDATE_FAVORITES,
   REMOVE_FAVORITE,
-  LOADING,
-  SET_USER
+  LOADING
 } from "./actions";
 
 const StoreContext = createContext();
@@ -22,12 +21,6 @@ const reducer = (state, action) => {
       currentPost: action.post,
       loading: false
     };
-  case SET_USER:
-    return {
-      ...state,
-      currentUser: action.user,
-      loading: false
-    }
   case UPDATE_POSTS:
     return {
       ...state,
@@ -87,9 +80,6 @@ const StoreProvider = ({ value = [], ...props }) => {
       category: ""
     },
     favorites: [],
-    user: {
-      username: ""
-    },
     loading: false
   });
   return <Provider value={[state, dispatch]} {...props} />;
