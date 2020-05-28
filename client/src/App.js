@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import { Layout } from './Components/Layout';
 // import { Main } from './Components/Main';
 import Footer from "./Components/Footer";
-import LoginForm from "./Components/LoginForm";
+import LoginForm from "./Components/LoginForm/LoginForm";
 import SignupForm from  "./Components/SignupForm";
 import Members from "./pages/MembersPage";
 import PostDetail from "./pages/PostDetail";

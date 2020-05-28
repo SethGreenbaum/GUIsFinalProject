@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import M from "materialize-css";
 import "./style.css";
-import LoginForm from "../LoginForm";
+import LoginForm from "../LoginForm/LoginForm";
 
 export default class LoginModal extends Component {
   constructor(props){
