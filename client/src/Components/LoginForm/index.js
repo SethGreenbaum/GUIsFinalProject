@@ -2,21 +2,20 @@ import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 import "./style.css";
+import API from "../../utils/API/userApi"
 
 
 class LoginForm extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       username: '',
       password: '',
-      redirectTo: null
+      redirectTo: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-
   };
-
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
@@ -28,7 +27,7 @@ class LoginForm extends Component {
     console.log('handleSubmit');
 
     axios
-      .post('/user/login', {
+      .post('/user/login/login', {
         username: this.state.username,
         password: this.state.password
       })
@@ -36,10 +35,15 @@ class LoginForm extends Component {
         console.log('login response: ')
         console.log(response)
         if (response.status === 200) {
-          // update App.js state
+          // update App. js state with username, this is what doesn't work,
+          // doesn't recognize updateUser props, tried drilling but got stuck in modal
           // this.props.updateUser({
           //   loggedIn: true,
           //   username: response.data.username
+          // })
+          // API.getUsers()
+          // .then(response => {
+          //   console.log(response)
           // })
           // update the state to redirect to home
           console.log("this worked for login!!")
@@ -58,7 +62,7 @@ class LoginForm extends Component {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
       return (
-        <div id="loginForm">
+        <div id="loginForm" updateUser={this.props.updateUser}>
           <div>
             <div className="row login-card">
               <div className="col s12 m12 l12" id="login-form">
@@ -98,7 +102,8 @@ class LoginForm extends Component {
                     id="login-btn"
                     type="submit"
                   >
-                  <Link to="/Members"></Link>Login</button>
+                  {/* <Link to="/Members"></Link> */}
+                  Login</button>
                 </form>
               </div>
             </div>

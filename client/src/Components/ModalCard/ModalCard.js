@@ -11,7 +11,7 @@ export default class ModalCard extends Component {
     }
     render() {
         return (
-          
+          <div>
             <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
           
            
@@ -24,7 +24,7 @@ export default class ModalCard extends Component {
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
               </div>
             </div>
-            
+            </div>
         );
     }
 }
