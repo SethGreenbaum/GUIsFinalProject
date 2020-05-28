@@ -3,7 +3,7 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.User
-      .find(req.query)
+      .find(req.body)
       .populate(
         {path: "posts", model: db.Post}
         )
@@ -11,7 +11,7 @@ module.exports = {
         {path: "messages", model: db.Message}
         )
       .populate(
-        {path: "linklikes", model: db.LinkLike}
+        {path: "linklikes", model: db.Linklike}
         )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

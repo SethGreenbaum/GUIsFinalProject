@@ -105,9 +105,12 @@ function PostCollections() {
                 <p href={post.link}>Link</p>
               </a>
               {state.favorites.indexOf(state.currentPost) !== -1 ? (
-                <LikeBtn onClick={() => removeFavorite(post._id)} style={{ opacity: "0.5"}} />
+                <LikeBtn onClick={() => removeFavorite(post._id)} style={{ opacity: "0.5"}} 
+                />
               ) : (
-                <LikeBtn onClick={() => addFavorite(post._id)} />
+                <LikeBtn onClick={() => addFavorite(post._id)} 
+                title={post.link}
+                />
               )}
               
               
