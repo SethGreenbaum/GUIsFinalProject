@@ -4,13 +4,16 @@ import LoginModal from "../LoginModal/index";
 
 
 
-function LoginBtn() {
+function LoginBtn({updateUser}) {
 
     return (
         <div className="center">
         <a class="waves-effect waves-light btn modal-trigger" href="#modal2" id="loginBtnStyle">Login</a>
 
-            <LoginModal />
+            <LoginModal 
+            //This is als where I tried to prop drill
+            updateUser={updateUser}
+            />
             </div>
             
     );
