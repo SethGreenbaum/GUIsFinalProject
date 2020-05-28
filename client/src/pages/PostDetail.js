@@ -8,7 +8,7 @@ import Nav from "../Components/Nav/index";
 import Wrapper from "../Components/Wrapper/index";
 
 
-const Detail = props => {
+const PostDetail = props => {
   const [state, dispatch] = useStoreContext();
 
   useEffect(() => {
@@ -33,41 +33,65 @@ const Detail = props => {
 
   return (
     <>
-    <Wrapper id="favorites-style">
     <Nav />
+    <Wrapper id="favorites-style">
     {state.currentPost ? (
       <Container fluid>
+      <div className="card black" id="detail-style">
+
         <Row>
-          <Col size="m12">
-              <h1>
-                {state.currentPost.header} by {state.currentPost.username}
-              </h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="m10 offset-m1">
-            <article>
-              <h1>Content:</h1>
-              <div className="card">
-              <p style={{color: "red", backgroundColor: "black"}}>{state.currentPost.body}</p>
-              </div>
-            </article>
-          </Col>
-          {state.favorites.indexOf(state.currentPost) !== -1 ? (
-            <button className="btn-small btn-danger" onClick={removeFavorite}>
+          <Col size="s12 m12 l12">
+              <h6 style={{ color: "#7289da", marginTop: "0px" }}>
+                q/ <span style={{ color: "orange" }}>{state.currentPost.category}</span> 
+                 <span> •</span> <span style={{ color: "darkGrey", fontSize: "12px"}}>
+                Posted by: <span style={{ color: "purple", fontWeight: "bold"}}>{state.currentPost.username}</span>
+                </span>
+                </h6>
+                 
+                
+                <div className="s12 m12 l6 offset-l2">
+              {state.favorites.indexOf(state.currentPost) !== -1 ? (
+            <button style={{ float: "left"}} className="btn-small btn-danger" onClick={removeFavorite}>
                 Remove from Favorites!
             </button>
           ) : (
-            <button className="btn-small" onClick={addFavorite}>
+            <button style={{ float: "left"}} className="btn-small" onClick={addFavorite}>
                 ❤️ Add to Favorites
             </button>
           )}
-        </Row>
-        <Row>
-          <Col size="m2">
-            <Link to="/Members">← Back to Posts</Link>
+          </div>
+              
           </Col>
         </Row>
+        <Row>
+          <div className="card">
+          <Col size="s12 m12 l12">
+            <article>
+              <div>
+                <h3 style={{ textAlign: "center"}}>{state.currentPost.header}</h3>
+              <div className="data-img col l6 offset-l3">
+              <img src={state.currentPost.link} id="image" />
+              <Col size="s12 m12 l12">
+                <Row>
+                <h2 style={{ display: "block", height: "1px", border: "0", borderTop: "1px solid #ccc", margin: "1em 0", padding: "0"}}></h2>
+              <p style={{textAlign: "center"}}>{state.currentPost.body}</p>
+              <h2 style={{ display: "block", height: "1px", border: "0", borderTop: "1px solid #ccc", margin: "1em 0", padding: "0"}}></h2>
+              
+              </Row>
+              </Col>
+              </div>
+              </div>
+            </article>
+          </Col>
+          </div>
+        </Row>
+        <Row>
+          <Col size="m3">
+            <a href="/Members">← Back to Posts</a>
+          </Col>
+        </Row>
+        </div>
+
       </Container>
       
     ) : (
@@ -78,4 +102,4 @@ const Detail = props => {
   );
 };
 
-export default Detail;
+export default PostDetail;

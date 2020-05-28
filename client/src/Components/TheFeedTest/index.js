@@ -6,7 +6,7 @@ function PostFeed() {
     return (
            <div className="col s12 m12 l6 offset-l1">
            <div className="card-header center">
-                       <h2 id="theFeedHeader">The Feed</h2>
+                       <h2 id="theFeedHeader"></h2>
                        <div>
            </div>
                    </div>

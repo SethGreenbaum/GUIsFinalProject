@@ -1,12 +1,19 @@
 .wrapper-body {
     background-image: url("./media-banner_gradient3.png");
     background-color: #23272a;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
     background-repeat: no-repeat;
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 #favorites-style {
-    height: 120vh;
+    height: 100%;
 }
 
+#detail-style {
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border: 2px solid #7289da;
+    margin: 0px;
+}

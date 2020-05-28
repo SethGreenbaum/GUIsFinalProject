@@ -22,9 +22,16 @@ class LoginForm extends Component {
     })
   };
 
+  
+
   handleSubmit(event) {
     event.preventDefault();
     console.log('handleSubmit');
+
+    function refreshPage() {
+      window.location.reload(false);
+    }
+  
 
     axios
       .post('/user/login/login', {
@@ -47,6 +54,7 @@ class LoginForm extends Component {
           this.setState({
             redirectTo: '/Members'
           })
+          refreshPage();
         }
       }).catch(error => {
         console.log('login error: ')
@@ -99,7 +107,7 @@ class LoginForm extends Component {
                     id="login-btn"
                     type="submit"
                   >
-                  {/* <Link to="/Members"></Link> */}
+        {/* <Link to="/Members"></Link> */}
                   Login</button>
                 </form>
               </div>

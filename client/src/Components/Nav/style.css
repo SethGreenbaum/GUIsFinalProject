@@ -1,15 +1,14 @@
 .nav-wrapper {
     background-color: black;
-    position: absolute;
+    position: fixed;
     color: #7289da;
     box-shadow: 300px;
 }
 
 
 
-#nav-title {
+#nav-title.brand-logo {
     color: #7289da;
-    margin-left: 35px;
 }
 
 #Dashboard {
