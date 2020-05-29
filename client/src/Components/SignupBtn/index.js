@@ -8,7 +8,7 @@ function SignupBtn() {
 
     return (
         <div className="center">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal3" id="signupBtnStyle">Signup</a>
+        <a className="waves-effect waves-light btn modal-trigger" href="#modal3" id="signupBtnStyle">Signup</a>
 
             <SignupModal />
             </div>

@@ -31,3 +31,10 @@ a#logoutID {
     color: lightgreen;
     font-weight: bold;
 }
+
+.sidenav {
+    width: 50%;
+    background-color: #23272a;
+    border-right: 2px solid #7289da;
+}
+

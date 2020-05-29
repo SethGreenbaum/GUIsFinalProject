@@ -87,7 +87,7 @@ const PostDetail = props => {
         </Row>
         <Row>
           <Col size="m3">
-            <a href="/Members">← Back to Posts</a>
+            <Link to="/Members">← Back to Posts</Link>
           </Col>
         </Row>
         </div>

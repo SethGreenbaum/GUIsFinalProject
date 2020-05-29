@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import M from "materialize-css";
+import MessagingModal from "../MessagingModal/index"
 import { Link } from "react-router-dom";
 // import LoginBtn from "../LoginBtn/LoginBtn";
 // import SignupBtn from "../SignupBtn/index";
@@ -50,14 +51,18 @@ render() {
         <nav className="nav-extended">
     <div className="nav-wrapper z-depth-3">
       <a href="/Members" id="nav-title" className="brand-logo center">Welcome {this.state.username}</a>
+      <a href="#" data-target="slide-out" className="right sidenav-trigger show-on-large"><i className="material-icons">chat</i></a>
       <ul id="nav-mobile">
       {/* <!-- Dropdown Trigger --> */}
-      <li><a className="dropdown-trigger" id="Dashboard" data-target="dropdown1">User Options<i className="material-icons right" style={{ color: "purple"}}>arrow_drop_down</i></a></li>          
+      <li><a className="dropdown-trigger" id="Dashboard" data-target="dropdown1">{this.state.username}'s options<i className="material-icons right" style={{ color: "purple"}}>arrow_drop_down</i></a></li>          
       <li className="hide-on-med-and-down">
         <a href="/Members" id="nav-title">
           Browse
         </a>
       </li>
+      {/* <li className="right">
+        <MessagingModal />
+      </li> */}
       </ul>
       {/* <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>
