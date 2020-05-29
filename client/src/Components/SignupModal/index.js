@@ -14,8 +14,8 @@ export default class SignupModal extends Component {
     render() {
   
       return (
-        <div id="modal3" class="modal">
-        <div class="modal-content">
+        <div id="modal3" className="modal">
+        <div className="modal-content">
           <SignupForm />
         </div>
       </div>

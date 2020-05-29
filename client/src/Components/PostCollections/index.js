@@ -7,7 +7,6 @@ import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import { REMOVE_POST, REMOVE_FAVORITE, UPDATE_POSTS, ADD_FAVORITE, LOADING } from "../../utils/actions";
 import postAPI from "../../utils/API/postApi";
-import likeAPI from "../../utils/API/likeApi";
 
 function PostCollections() {
   const [state, dispatch] = useStoreContext();

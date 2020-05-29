@@ -16,8 +16,8 @@ export default class LoginModal extends Component {
     render() {
   
       return (
-        <div id="modal2" class="modal">
-        <div class="modal-content">
+        <div id="modal2" className="modal">
+        <div className="modal-content">
           <LoginForm 
           //this is that prop drilling I was trying to do with update 
           updateUser = {this.props.updateUser}
