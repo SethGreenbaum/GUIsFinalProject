@@ -21,8 +21,9 @@ function MessagingCard() {
           .then(result => {
               dispatch({
                   type: ADD_MESSAGE,
-                  messages: result.data
+                  messages: postData
               });
+              console.log(state.messages)
           })
           .catch(err => console.log(err));
       usernameRef.current.value = "";
