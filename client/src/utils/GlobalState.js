@@ -52,7 +52,7 @@ const reducer = (state, action) => {
     case ADD_MESSAGE:
       return {
         ...state,
-        messages: [action.post, ...state.messages],
+        messages: [action.message, ...state.messages],
         loading: false
       };
 

@@ -1,46 +1,71 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { CollectionItem, Collection } from "../CollectionList";
 import DeleteBtn from "../DeleteBtn";
 import "./style.css";
 import messageAPI from "../../utils/API/messageApi";
+import API from "../../utils/API/userApi";
 import ls from "local-storage";
 import M from "materialize-css";
+import { Link } from "react-router-dom";
 
-class MessagesCollection extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          sender: '',
-          reciever: '',
-          text: ''
-        }
+const MessagesCollection = () => {
+    // const [state, dispatch] = useStoreContext();
+  
+    // const getFavorites = () => {
+    //   dispatch({ type: LOADING });
+    //   dispatch({ type: UPDATE_FAVORITES });
+    // };
+    const [messages, setMessages] = useState([])
+    const removeFromMessages = id => {
+      messageAPI.deleteMessage(id)
+        .then(() => {
+          console.log("remove success!")
+        })
+        .catch(err => console.log(err));
+    };
+  
+    useEffect(() => {
+      let getMessages = () => {
+        // dispatch({ type: LOADING });
+        let user = ls.get('username');
+        API.getUser(user)
+          .then(results => {
+            setMessages(results.data[0].messages)
+            console.log(results)
+          })
+          .catch(err => console.log(err));
       };
-//       componentDidMount() {
-//         document.addEventListener('DOMContentLoaded', function() {
-//         let sidenav = document.querySelector('#slide-out');
-//         M.Sidenav.init(sidenav, {});
-//       });
-//       var user = ls.get('username');
-//     this.setState({
-//       username: user
-//     })
-//     console.log("ls"+ user)
-// }
+      getMessages();
+      console.log(messages)
+    }, []);
+  
+    return (
+      <div className="container mb-5 mt-5">
+        {messages.length ? (
+          <Collection>
+            {messages.map(post => (
+              <CollectionItem key={post._id} id="post-style">
+                  <div className="card small black" >
+                      <div className="card-stacked">
+                          <div className="card-content" id="card-body">
+                              <DeleteBtn onClick={() => removeFromMessages(post._id)} />
+                              <h4 style={{ marginTop: "0px", color: "#7289da"}}><span style={{ color: "orange" }}>{post.text}</span> </h4>
+                              <br />
 
-    render() {
-  return (
-        <div class="row">
-            <div class="col s12 m10 offset-m1">
-                <div class="card blue-grey darken-1" id="messages-collection">
-                    <div class="card-content white-text">
-                    <span class="card-title">{this.state.sender}</span>
-                    <p>{this.state.text}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        );
-    }
-}
+                  Sent by: <span style={{ color: "purple", fontWeight: "bold"}}>{post.sender}</span>
+                  </div>
+                          </div>
+                      </div>
+              </CollectionItem>
+            ))}
+          </Collection>
+        ) : (
+          <h3>No Messages!</h3>
+        )}
+      </div>
+    );
+  };
 export default MessagesCollection;
+
+
