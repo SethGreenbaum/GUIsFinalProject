@@ -18,7 +18,7 @@ export default class Slider extends Component {
             <div>
                 
 
-                <div className="container">
+                <div className="container" style={{ position: "relative", top: "10px"}}>
                     <div className="slider">
                         <ul className="slides">
                         <li>

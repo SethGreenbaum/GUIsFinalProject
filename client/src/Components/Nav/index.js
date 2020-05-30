@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import M from "materialize-css";
 import MessagingModal from "../MessagingModal/index"
 import { Link } from "react-router-dom";
+import HeadlineCard from "../HeadlineCard/index";
 // import LoginBtn from "../LoginBtn/LoginBtn";
 // import SignupBtn from "../SignupBtn/index";
 import "./style.css";
@@ -15,6 +16,7 @@ export default class Nav extends Component {
       username: ''
     }
   };
+  
   componentDidMount() {
       document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.dropdown-trigger');
@@ -25,9 +27,12 @@ export default class Nav extends Component {
       username: user
     })
     console.log("ls"+ user)
+    
 }
 
 render() {
+
+  
     return (
         <div className="navbar">
             <ul id="dropdown1" className="dropdown-content">
@@ -48,12 +53,19 @@ render() {
                     </a>
                     </li>
             </ul>
+            <ul id="dropdown2" className="dropdown-content">
+                
+                <li style={{ backgroundColor: "black", border: "2px solid #7289da" }}><HeadlineCard /></li>
+                
+            </ul>
         <nav className="nav-extended">
     <div className="nav-wrapper z-depth-3">
       <a href="/Members" id="nav-title" className="brand-logo center">Welcome {this.state.username}</a>
       <a href="#" data-target="slide-out" className="right sidenav-trigger show-on-large"><i className="material-icons">chat</i></a>
       <ul id="nav-mobile">
       {/* <!-- Dropdown Trigger --> */}
+      <a className="dropdown-trigger right" id="Dashboard" data-target="dropdown2">{this.state.username}'s Cocktail of the Day<i className="material-icons left" style={{ color: "yellow"}}>arrow_drop_down</i></a>      
+
       <li><a className="dropdown-trigger" id="Dashboard" data-target="dropdown1">{this.state.username}'s options<i className="material-icons right" style={{ color: "purple"}}>arrow_drop_down</i></a></li>          
       <li className="hide-on-med-and-down">
         <a href="/Members" id="nav-title">
