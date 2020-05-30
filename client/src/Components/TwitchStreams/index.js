@@ -41,7 +41,7 @@ export default class TwitchStreams extends Component {
 
         <div className="col s12 m12 l4">
             <div className="row s12 m12 l4">
-        <button className="auth btn" onClick={this.handleSubmit} style={{ position: "relative", left: "35%", marginBottom: "20px" }}>Authorize Twitch</button>
+        <button className="auth btn" onClick={this.handleSubmit} style={{ position: "relative", left: "35%", marginBottom: "20px" }}>LOAD TWITCH STREAMS</button>
             </div>
              <div className="card-header center">
                  <h2 id="TwitchStreamsHeader">Twitch Streams</h2>

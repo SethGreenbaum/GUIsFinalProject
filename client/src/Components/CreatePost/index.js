@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING, UPDATE_POSTS } from "../../utils/actions";
 import API from "../../utils/API/postApi";
+import ls from "local-storage"
 
 
 function CreatePostForm() {
@@ -9,6 +10,7 @@ function CreatePostForm() {
     const bodyRef = useRef();
     const headerRef = useRef();
     const categoryRef = useRef();
+    const linkRef = useRef();
     const [state, dispatch] = useStoreContext();
 
     const handleSubmit = e => {
@@ -16,8 +18,9 @@ function CreatePostForm() {
       dispatch({ type: LOADING });
       var postData = {
         header: headerRef.current.value,
-        username: usernameRef.current.value,
+        username: ls.get('username'),
         body: bodyRef.current.value,
+        link: linkRef.current.value,
         category: categoryRef.current.value,
       }
       API.createPost(postData)
@@ -29,6 +32,7 @@ function CreatePostForm() {
           // headerRef.current.value = "";
           // bodyRef.current.value = "";
           // usernameRef.current.value = "";
+          // linkRef.current.value = "";
           // categoryRef.current.value = "";
         })
         .then(
@@ -44,7 +48,8 @@ function CreatePostForm() {
         .catch(err => console.log(err));
       headerRef.current.value = "";
       bodyRef.current.value = "";
-      usernameRef.current.value = "";
+      // usernameRef.current.value = "";
+      linkRef.current.value = "";
       categoryRef.current.value = "";
     };
 
@@ -55,7 +60,7 @@ function CreatePostForm() {
         <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
           <input style={{ color: "white"}} className="form-control mb-5" required ref={headerRef} placeholder="Header" />
           <textarea style={{ color: "white"}} className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
-          <input style={{ color: "white"}} className="form-control mb-5" ref={usernameRef} placeholder="username" />
+          <input style={{ color: "white"}} className="form-control mb-5" ref={linkRef} placeholder="Link" />
           <input style={{ color: "white"}} className="form-control mb-5" required ref={categoryRef} placeholder="Category" />
           <button className="btn btn-success mt-3 mb-5" disabled={state.loading}  type="submit">
             Save Post
@@ -65,4 +70,5 @@ function CreatePostForm() {
     );
   }
   export default CreatePostForm;
+  
   
