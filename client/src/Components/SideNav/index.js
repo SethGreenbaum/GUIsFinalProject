@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import MessagingModal from "../MessagingModal";
+// import MessagingModal from "../MessagingModal";
+import MessagingCard from "../MessagingCard/index";
 import MessageCollection from "../MessagesCollection";
 import ls from "local-storage";
 import M from "materialize-css";
@@ -29,7 +30,7 @@ class SideNav extends Component {
         return (
             <div id="slide-out" className="collection sidenav center">
                 <h4 style={{ color: "#7289da", textAlign: "center", padding: "20px", borderBottomWidth: "0" }}>Message a Quarantinee</h4>
-                    <span><MessagingModal /></span>
+                    <span><MessagingCard /></span>
 
                 <h4 style={{ color: "#7289da", textAlign: "center", padding: "20px" }}>{this.state.username} Messages</h4>
                 <span href="#item1" className="col s12 m12 l12"><MessageCollection /></span>

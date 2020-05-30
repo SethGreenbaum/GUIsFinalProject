@@ -75,21 +75,15 @@ class MessagingModal extends Component {
               <form className="col s12">
             <div className="input-field col s6">
           <i className="material-icons prefix">mode_edit</i>
-          <textarea id="icon_prefix2" className="materialize-textarea" style={{ color: "white"}}></textarea>
+          <input id="icon_prefix2" style={{ color: "white"}}></input>
           <label htmlFor="icon_prefix2">To:</label>
         </div>
         <br />
         <div className="input-field col s6">
-          <textarea id="icon_prefix2" className="materialize-textarea" style={{ color: "white"}}></textarea>
+          <input id="icon_prefix2" type="text" style={{ color: "white"}}></input>
           <label htmlFor="icon_prefix2">Message:</label>
         </div>
         </form>
-          </div>
-          <div className="modal-footer black">
-          
-            <button className="btn btn-success mt-3 mb-5 modal-close"  type="submit">
-            Send Message
-          </button>
           </div>
         </div>
       </div>

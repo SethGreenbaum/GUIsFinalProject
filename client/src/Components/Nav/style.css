@@ -5,7 +5,9 @@
     box-shadow: 300px;
 }
 
-
+.sidenav-trigger {
+    color: #7289da;
+}
 
 #nav-title.brand-logo {
     color: #7289da;
@@ -37,4 +39,5 @@ a#logoutID {
     background-color: #23272a;
     border-right: 2px solid #7289da;
 }
+
 

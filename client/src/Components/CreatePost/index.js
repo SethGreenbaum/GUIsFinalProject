@@ -9,7 +9,6 @@ function CreatePostForm() {
     const bodyRef = useRef();
     const headerRef = useRef();
     const categoryRef = useRef();
-    const linkRef = useRef();
     const [state, dispatch] = useStoreContext();
 
     const handleSubmit = e => {
@@ -19,7 +18,6 @@ function CreatePostForm() {
         header: headerRef.current.value,
         username: usernameRef.current.value,
         body: bodyRef.current.value,
-        link: linkRef.current.value,
         category: categoryRef.current.value,
       }
       API.createPost(postData)
@@ -31,7 +29,6 @@ function CreatePostForm() {
           // headerRef.current.value = "";
           // bodyRef.current.value = "";
           // usernameRef.current.value = "";
-          // linkRef.current.value = "";
           // categoryRef.current.value = "";
         })
         .then(
@@ -48,7 +45,6 @@ function CreatePostForm() {
       headerRef.current.value = "";
       bodyRef.current.value = "";
       usernameRef.current.value = "";
-      linkRef.current.value = "";
       categoryRef.current.value = "";
     };
 
@@ -60,7 +56,6 @@ function CreatePostForm() {
           <input style={{ color: "white"}} className="form-control mb-5" required ref={headerRef} placeholder="Header" />
           <textarea style={{ color: "white"}} className="form-control mb-5" required ref={bodyRef} placeholder="Body" />
           <input style={{ color: "white"}} className="form-control mb-5" ref={usernameRef} placeholder="username" />
-          <input style={{ color: "white"}} className="form-control mb-5" ref={linkRef} placeholder="Link" />
           <input style={{ color: "white"}} className="form-control mb-5" required ref={categoryRef} placeholder="Category" />
           <button className="btn btn-success mt-3 mb-5" disabled={state.loading}  type="submit">
             Save Post
