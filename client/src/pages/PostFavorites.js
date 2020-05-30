@@ -46,24 +46,51 @@ const PostFavorites = () => {
   return (
     <>
     <Nav />
-    <Wrapper id="favorites-style">
+    <Wrapper id="favorites-style" style={{ height: "100%"}}>
     <Container>
       <Row>
         <div className=" col s12 m12 l12">
           <div className="card small horizontal black">
     <div className="container mb-5 mt-5">
-      <h1 className="text-center">Here's All of Your Favorite Posts</h1>
+      <h1 style={{ textAlign: "center", color: "#7289da"}}>Here's All of Your Favorite Posts</h1>
       {favorites.length ? (
         <Collection>
-          <h3 className="mb-5 mt-5">Click on a post to view in detail</h3>
+          <h3 style={{ textAlign: "center", color: "#7289da"}}>Click on a post to view in detail</h3>
           {favorites.map(post => (
-            <CollectionItem key={post._id}>
-                <strong>
-                   {post.name}   by {post.username}
-                </strong>
-              <a href={"/posts/" + post._id}>Post Link</a>
-              <a href ={post.link}>Content Link</a>
-              <DeleteBtn onClick={() => removeFromFavorites(post._id)} />
+            <CollectionItem key={post._id} id="post-style">
+                <div className="card small black" >
+                    <div className="card-stacked">
+                        <div className="card-content" id="card-body">
+                            <DeleteBtn onClick={() => removeFromFavorites(post._id)} />
+                            <h4 style={{ marginTop: "0px", color: "#7289da"}}>{post.header}</h4>
+                            <br />
+                            q/ <span style={{ color: "orange" }}>{post.category}</span> 
+                            <br />
+                 <span> •</span> <span style={{ color: "darkGrey", fontSize: "12px"}}>
+                Posted by: <span style={{ color: "purple", fontWeight: "bold"}}>{post.username}</span>
+                </span> 
+                <div className="card-action">
+                    <Link to={"/posts/" + post._id}>
+                    <strong style={{color: "#7289da"}}>
+                Click here to open post </strong>
+              </Link> 
+              <br />
+              <br />
+              <a href={post.link} target="_blank">
+                <p href={post.link}>Link</p>
+              </a>
+
+                </div>
+                        </div>
+                    </div>
+                    <div className="card-reveal black">
+                    <span className="card-title" style={{ color: "white"}}>{post.header}<i className="material-icons right">close</i>
+                <br />
+                <br />
+                <p>{post.body}</p>
+                 u/ <strong style={{ color: "orange" }}>{post.username}</strong></span>
+                    </div>
+                </div>
             </CollectionItem>
           ))}
         </Collection>

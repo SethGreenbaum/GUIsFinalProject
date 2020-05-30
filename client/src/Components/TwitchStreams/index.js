@@ -38,8 +38,11 @@ export default class TwitchStreams extends Component {
   
       return (
         <div className="TwitchStreamsBox">
-            <button className="auth" onClick={this.handleSubmit}>Authorize Twitch</button>
+
         <div className="col s12 m12 l4">
+            <div className="row s12 m12 l4">
+        <button className="auth btn" onClick={this.handleSubmit} style={{ position: "relative", left: "35%", marginBottom: "20px" }}>Authorize Twitch</button>
+            </div>
              <div className="card-header center">
                  <h2 id="TwitchStreamsHeader">Twitch Streams</h2>
              </div>
@@ -47,10 +50,10 @@ export default class TwitchStreams extends Component {
              {this.state.data.map(function(twitch) {
                  return (
              <CollectionItem key={twitch.id}>
-             <div className="col s6 m6 l12" >
+             <div className="col s12 m12 l12" >
                  <div className="card">
                      <div className="card-image">
-                         <img src={twitch.thumbnail_url.replace("-{width}x{height}", "")} alt="twitch1"/>
+                     <a href={"http://www.twitch.tv/" + twitch.user_name}><img src={twitch.thumbnail_url.replace("-{width}x{height}", "")} alt="twitch1"/></a>
                          <span className="card-title">{twitch.title}</span>
 
                      </div>

@@ -39,8 +39,7 @@ render() {
                 <li>
                 <a href="/Members">Browse</a>
                 </li>
-                <li><a href="#!">Messages</a></li>
-                <li><a href="#!">Posts</a></li>
+                {/* <li><a href="#!">Messages</a></li> */}
                 <li>
                   <a href="/favorites">Favorites</a>
                 </li>

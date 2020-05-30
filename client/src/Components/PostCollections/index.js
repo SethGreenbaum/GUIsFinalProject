@@ -74,13 +74,7 @@ function PostCollections() {
         <Collection>
           {state.posts.map(post => ( 
             <CollectionItem key={post._id} id="post-style">
-                <div className="card small horizontal black" id="image-style">
-                    <div className="card-image waves-effect waves-block waves-light" id="main-overlay">
-                        <img className="activator" src={post.link} id="image" />
-                        <div className="overlay">
-                          <div className="text-overlay" style={{ color: "#7289da", fontSize: "10px", textAlign: "center"}}>Click image for body preview</div>
-                        </div>
-                        </div>
+                <div className="card small black" id="image-style">
                         <div className="card-stacked">
                             <div className="card-content" id="card-body">
                             <DeleteBtn onClick={() => removePost(post._id)} />
