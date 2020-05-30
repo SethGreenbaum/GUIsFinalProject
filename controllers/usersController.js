@@ -18,7 +18,7 @@ module.exports = {
   },
   findById: function(req, res) {
     db.User
-      .findById(req.params.id)
+      .find({username: req.params.id})
       .populate(
         {path: "posts", model: db.Post}
         )

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default {
-  getUsers: function() {
-    return axios.get("/api/users");
+  getUsers: function(userData) {
+    return axios.get("/api/users/", userData);
   },
   getUser: function(id) {
     return axios.get("/api/users/" + id);
