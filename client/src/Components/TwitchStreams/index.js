@@ -51,15 +51,15 @@ export default class TwitchStreams extends Component {
                  return (
              <CollectionItem key={twitch.id}>
              <div className="col s12 m12 l12" >
-                 <div className="card">
+                 <div className="card black" style={{ color: "white" }}>
                      <div className="card-image">
-                     <a href={"http://www.twitch.tv/" + twitch.user_name}><img src={twitch.thumbnail_url.replace("-{width}x{height}", "")} alt="twitch1"/></a>
-                         <span className="card-title">{twitch.title}</span>
+                     <a href={"http://www.twitch.tv/" + twitch.user_name} target="_blank"><img src={twitch.thumbnail_url.replace("-{width}x{height}", "")} alt="twitch1"/></a>
+                         <p className="card-content" style={{ textAlign: "center"}}>{twitch.title}</p>
 
                      </div>
                  </div>
              </div>
-             <a href={"http://www.twitch.tv/" + twitch.user_name}>
+             <a href={"http://www.twitch.tv/" + twitch.user_name} target="_blank">
                         <strong style={{color: "#7289da"}}>
                          Link to Stream </strong>
             </a>

@@ -36,13 +36,10 @@ class SideNav extends Component {
                       </div>
 
                 <h4 style={{ color: "#7289da", textAlign: "center", padding: "20px" }}>{this.state.username}'s incoming Messages</h4>
-                <div className="col s12 m12 l12 messages-div">
+                <div className="col s12 m12 l12 messages-div" style={{  paddingBottom: "150px"}}>
                 <span href="#item1" className="col s12 m12 l12"><MessageCollection /></span>
                 </div>
-                <div className="card-container">
-                    <div className="card-content">
-                    </div>
-                </div>
+                
                 
             </div>
             
