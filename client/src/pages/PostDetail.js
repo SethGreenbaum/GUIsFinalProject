@@ -70,7 +70,7 @@ const PostDetail = props => {
               <div>
                 <h3 style={{ textAlign: "center"}}>{state.currentPost.header}</h3>
               <div className="data-img">
-              <img src={state.currentPost.link} id="image" />
+              <a heref={state.currentPost.link}>LINK</a>
               <Col size="s12 m12 l12">
                 <Row>
                 <h2 style={{ display: "block", height: "1px", border: "0", borderTop: "1px solid #ccc", margin: "1em 0", padding: "0"}}></h2>
