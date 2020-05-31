@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import M from "materialize-css";
 import { Link } from "react-router-dom";
-import HeadlineCard from "../CocktailoftheDayBtn/index";
+import CocktailoftheDayBtn from "../CocktailoftheDayBtn/index";
 // import LoginBtn from "../LoginBtn/LoginBtn";
 // import SignupBtn from "../SignupBtn/index";
 import "./style.css";
@@ -53,7 +53,7 @@ render() {
             </ul>
             <ul id="dropdown2" className="dropdown-content">
                 
-                <li style={{ backgroundColor: "black", border: "2px solid #7289da" }}><HeadlineCard /></li>
+                <li style={{ backgroundColor: "black", border: "2px solid #7289da" }}><CocktailoftheDayBtn /></li>
                 
             </ul>
         <nav className="nav-extended">

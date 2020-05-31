@@ -7,11 +7,14 @@
     background-attachment: fixed;
 }
 
-#favorites-style {
-    height: 100%;
+#detail-style {
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border: 2px solid #7289da;
+    margin: 0px;
 }
 
-#detail-style {
+#header-style {
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 2), 0 6px 6px rgba(0, 0, 0, 0.23);
     border: 2px solid #7289da;

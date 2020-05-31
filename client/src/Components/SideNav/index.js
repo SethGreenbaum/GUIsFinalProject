@@ -35,7 +35,7 @@ class SideNav extends Component {
                       <MessagingForm />
                       </div>
 
-                <h4 style={{ color: "#7289da", textAlign: "center", padding: "20px" }}>{this.state.username} Messages</h4>
+                <h4 style={{ color: "#7289da", textAlign: "center", padding: "20px" }}>{this.state.username}'s incoming Messages</h4>
                 <div className="col s12 m12 l12 messages-div">
                 <span href="#item1" className="col s12 m12 l12"><MessageCollection /></span>
                 </div>

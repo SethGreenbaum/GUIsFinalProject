@@ -81,7 +81,7 @@ function PostCollections() {
 
                             <h4 style={{ marginTop: "0px", color: "#7289da"}}>{post.header}</h4>
                             <br />
-                            q/ <span style={{ color: "orange" }}>{post.category}</span> 
+                            q/ <span style={{ color: "orange" }}>{post.username}</span> 
                             <br />
                  <span> •</span> <span style={{ color: "darkGrey", fontSize: "12px"}}>
                 Posted by: <span style={{ color: "purple", fontWeight: "bold"}}>{post.username}</span>
