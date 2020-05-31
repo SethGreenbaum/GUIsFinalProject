@@ -1,11 +1,20 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./style.css";
 import M from 'materialize-css';
 import logo1 from "./slider1.PNG";
 import logo2 from "./slider2.PNG";
 import logo3 from "./slider3.PNG";
+import API from "../../utils/externalAPI/cocktailApi"
+
 
 export default class Slider extends Component {
+    constructor() {
+        super()
+        this.state = {
+          data: []
+        }
+        this.componentDidMount = this.componentDidMount.bind(this)
+    };
 
     componentDidMount() {
         document.addEventListener('DOMContentLoaded', function() {
@@ -13,6 +22,7 @@ export default class Slider extends Component {
             var instances = M.Slider.init(elems, {});
           });
     }
+
     render() {
         return (
             <div>

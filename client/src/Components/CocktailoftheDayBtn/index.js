@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import "./style.css";
+import API from "../../utils/externalAPI/cocktailApi"
 // import Carousel from "../Carousel/index";
 
 
@@ -13,7 +14,7 @@ function HeadlineCard() {
 
 
     useEffect(() => {
-        fetch("http://www.thecocktaildb.com/api/json/v1/1/random.php")
+        API.getDrinks()
         .then(res => res.json())
         .then(
             (result) => {
