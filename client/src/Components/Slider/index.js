@@ -4,6 +4,7 @@ import M from 'materialize-css';
 import logo1 from "./slider1.PNG";
 import logo2 from "./slider2.PNG";
 import logo3 from "./slider3.PNG";
+import logo4 from "./cocktailapp.png";
 import API from "../../utils/externalAPI/cocktailApi"
 
 
@@ -32,10 +33,16 @@ export default class Slider extends Component {
                     <div className="slider">
                         <ul className="slides">
                         <li>
-                            <img src={logo2} alt="clips"/>
+                            <img src="https://cdn.vox-cdn.com/thumbor/R5ericK4jly9ilvVmXUvoltuOXc=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/16011059/GVC_UI_50people_laptop_1024x652.png" alt="quarantinees" />
+                            <div className="caption right-align">
+                                <h3>Check out the blog to share your quarantine stories and shared posts!</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src={logo4} alt="clips"/>
                             <div className="caption left-align" id="youtubeSlide">
-                                <h3>Explore top posts from Reddit, clips from Youtube, Twitch, or any other platform all in one place</h3>
-                                {/* <h5 className="light grey-text text-lighten-3"></h5> */}
+                                <h3>Cocktail Mixtape Integration</h3>
+                                <h5 className="light grey-text text-lighten-3">coming soon</h5>
                             </div>
                         </li>
                         <li>
@@ -43,13 +50,6 @@ export default class Slider extends Component {
                             <div className="caption left-align">
                                 <h3>Share your Quarantinee recipies</h3>
                                 <h5 className="light grey-text text-lighten-3">Delicacy on a budget</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://cdn57.androidauthority.net/wp-content/uploads/2018/12/Discord-best-chat-room-apps-for-android.jpg" alt="chat"/> 
-                            <div className="caption center-align" id="chatroomSlide">
-                                <h3>Update 0.9: Campfire Chatroom</h3>
-                                <h5 className="light grey-text text-lighten-3">An outlet to speak live with other quarantinees</h5>
                             </div>
                         </li>
                         <li>
