@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import M from "materialize-css";
-import MessagingModal from "../MessagingModal/index"
 import { Link } from "react-router-dom";
-import HeadlineCard from "../HeadlineCard/index";
+import HeadlineCard from "../CocktailoftheDayBtn/index";
 // import LoginBtn from "../LoginBtn/LoginBtn";
 // import SignupBtn from "../SignupBtn/index";
 import "./style.css";
