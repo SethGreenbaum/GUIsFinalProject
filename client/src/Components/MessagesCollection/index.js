@@ -53,7 +53,7 @@ const MessagesCollection = () => {
           <Collection>
             {messages.map(post => (
               <CollectionItem key={post._id}>
-                  <div id="messages-collection" style={{ height: "100%", padding: "10px" }} >
+                  <div style={{ height: "100%", padding: "10px" }} >
                       <div className="card-stacked">
                           <div className="card-content" id="card-body">
                               <DeleteBtn onClick={() => removeFromMessages(post._id)} style={{ paddingLeft: "20px" }}/>

@@ -13,7 +13,7 @@ render() {
         <nav className="nav-extended">
     <div className="nav-wrapper z-depth-3">
       <a href="/" id="nav-title" className="brand-logo center">Quarantinee</a>
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
+      <ul id="nav-mobile" className="right">
         <li>
             <SignupBtn />
         </li>

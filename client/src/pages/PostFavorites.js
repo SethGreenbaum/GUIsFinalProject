@@ -12,8 +12,9 @@ import API from "../../src/utils/API/userApi";
 import likeAPI from "../../src/utils/API/linklikeAPI"
 
 
+
+
 const PostFavorites = () => {
-  // const [state, dispatch] = useStoreContext();
 
   // const getFavorites = () => {
   //   dispatch({ type: LOADING });
@@ -21,7 +22,7 @@ const PostFavorites = () => {
   // };
   const [favorites, setFavorites] = useState([])
   const removeFromFavorites = id => {
-    likeAPI.deleteLinklike(id)
+    likeAPI.deleteLinkLike(id)
       .then(() => {
         console.log("remove success!")
       })
@@ -46,13 +47,13 @@ const PostFavorites = () => {
   return (
     <>
     <Nav />
-    <Wrapper id="favorites-style" style={{ height: "100%"}}>
+    <Wrapper style={{ overflow: "auto" }}>
     <Container>
       <Row>
         <div className=" col s12 m12 l12">
-          <div className="card small horizontal black">
-    <div className="container mb-5 mt-5">
-      <h1 style={{ textAlign: "center", color: "#7289da"}}>Here's All of Your Favorite Posts</h1>
+          <div className="card black">
+      <h1 id="header-style" style={{ textAlign: "center", color: "#7289da", padding: "10px" }}>Here's All of Your Favorite Posts</h1>
+      </div>
       {favorites.length ? (
         <Collection>
           <h3 style={{ textAlign: "center", color: "#7289da"}}>Click on a post to view in detail</h3>
@@ -83,13 +84,6 @@ const PostFavorites = () => {
                 </div>
                         </div>
                     </div>
-                    <div className="card-reveal black">
-                    <span className="card-title" style={{ color: "white"}}>{post.header}<i className="material-icons right">close</i>
-                <br />
-                <br />
-                <p>{post.body}</p>
-                 u/ <strong style={{ color: "orange" }}>{post.username}</strong></span>
-                    </div>
                 </div>
             </CollectionItem>
           ))}
@@ -97,11 +91,9 @@ const PostFavorites = () => {
       ) : (
         <h3>You haven't added any favorites yet!</h3>
       )}
-      <div className="mt-5">
-        <Link to="/Members">Back to home</Link>
+      <div style={{ height: "37vh"}}>
+      <Link to="/Members">Back to home</Link>
       </div>
-    </div>
-    </div>
     </div>
     </Row>
     </Container>
