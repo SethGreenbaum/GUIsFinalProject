@@ -4,7 +4,7 @@ import { ADD_MESSAGE, LOADING, UPDATE_MESSAGE } from "../../utils/actions";
 import API from "../../utils/API/messageApi";
 import ls from "local-storage";
 
-function MessagingCard() {
+function MessagingForm() {
   const usernameRef = useRef();
   const textRef = useRef();
   const [state, dispatch] = useStoreContext();
@@ -31,18 +31,13 @@ function MessagingCard() {
   };
 
     return (
-        <div className="card black">
-        <div className="row">
-            <div className="col s10">
-        <div className="card" style={{ color: "white", backgroundColor: "black" }}>
-            <form className="col s12" onSubmit={handleSubmit}>
-            <div className="input-field col s10 offset-s2 m10 offset-m2 l10 offset-l2">
-          <i className="material-icons prefix">mode_edit</i>
-          <input id="icon_prefix2" className="validate" style={{ color: "white"}} required ref={usernameRef} placeholder="Enter username of Quarantinee"></input>
+            <form onSubmit={handleSubmit}>
+            <div className="input-field ">
+          <input type="text" style={{ color: "white"}} required ref={usernameRef} placeholder="Enter username of Quarantinee"></input>
           <label htmlFor="icon_prefix2">To:</label>
         </div>
         <br />
-        <div className="input-field col s10 offset-s2 m10 offset-m2 l10 offset-l2">
+        <div className="input-field ">
           <input id="icon_prefix2" type="text" style={{ color: "white"}} ref={textRef} placeholder="Enter message here..."></input>
           <label htmlFor="icon_prefix2">Message:</label>
         </div>
@@ -50,11 +45,7 @@ function MessagingCard() {
             Send Message
           </button>
         </form>
-        </div>
-        </div>
-        </div>
-        </div>
     )
 };
 
-export default MessagingCard;
+export default MessagingForm;

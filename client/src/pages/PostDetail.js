@@ -65,11 +65,11 @@ const PostDetail = props => {
         </Row>
         <Row>
           <div className="card">
-          <Col size="s12 m12 l12">
+          <Col size="s10 offset-s1 m10 offset-m1 l10 offset-l1">
             <article>
               <div>
                 <h3 style={{ textAlign: "center"}}>{state.currentPost.header}</h3>
-              <div className="data-img col l6 offset-l3">
+              <div className="data-img">
               <img src={state.currentPost.link} id="image" />
               <Col size="s12 m12 l12">
                 <Row>

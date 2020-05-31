@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-// import MessagingModal from "../MessagingModal";
-import MessagingCard from "../MessagingCard/index";
+import MessagingCard from "../MessagingForm/index";
+import MessagingForm from "../MessagingForm/index";
 import MessageCollection from "../MessagesCollection";
 import ls from "local-storage";
 import M from "materialize-css";
+import "./style.css";
 
 
 class SideNav extends Component {
@@ -30,12 +31,21 @@ class SideNav extends Component {
         return (
             <div id="slide-out" className="collection sidenav center">
                 <h4 style={{ color: "#7289da", textAlign: "center", padding: "20px", borderBottomWidth: "0" }}>Message a Quarantinee</h4>
-                    <span><MessagingCard /></span>
+                    <div id="messaging-card" style={{ marginLeft: "25px", marginRight: "25px", backgroundColor: "black", padding: "10px" }}>
+                      <MessagingForm />
+                      </div>
 
                 <h4 style={{ color: "#7289da", textAlign: "center", padding: "20px" }}>{this.state.username} Messages</h4>
+                <div className="col s12 m12 l12 messages-div">
                 <span href="#item1" className="col s12 m12 l12"><MessageCollection /></span>
-
+                </div>
+                <div className="card-container">
+                    <div className="card-content">
+                    </div>
+                </div>
+                
             </div>
+            
         )
     }
 }

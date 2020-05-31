@@ -9,5 +9,5 @@ export function Collection({ children }) {
     );
 }
 export function CollectionItem ({ children }) {
-    return <li className="collection-item black">{children}</li>;
-}
+    return <li className="collection-item black">{children}</li>
+};
